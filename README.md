@@ -68,11 +68,11 @@ Hallo, mein Name ist LiaScript, ich bin eine auf Markdown basierende Sprache, di
 Der Vorteil von Markdown ist, dass es bereits weit verbreitet ist, einfach zu schreiben und zu lesen ist, und dass es von vielen Plattformen unterstützt wird.
 Der größte Nachteil ist jedoch, dass es @burn(statisch wie die Hölle) und keine Interaktivität bietet.
 
-     {{1-2}}
-<section>
-
     --{{1}}--
 Also haben sich meine Väter daran gemacht, Markdown von Grund auf neu zu denken...
+
+     {{1-2}}
+*******************************
 
 ?[Giorgio Moroder](https://music.youtube.com/watch?v=zhl-Cs1-sG4&si=fwB6LT2I0rQ0_CGE&start=300&end=312)<!-- style="border-radius: 10px; border: none" -->
 
@@ -80,7 +80,7 @@ Also haben sich meine Väter daran gemacht, Markdown von Grund auf neu zu denken
 >
 > -- Giorgio Moroder (Erfinder der Disco-Musik)
 
-</section>
+******************************
 
     --{{2}}--
 Eigentlich sind Tabellen in Markdown einfach zu erstellen und wie schon erwähnt, sind sie ganz schön @burn(statisch).
@@ -140,7 +140,7 @@ Video kann ich auch und natürlich funktioniere ich auch auf Feature-Phones auch
 Ich kann auch versuchen andere Arten von Inhalten einzubetten, die unter keine der beiden Kategorien fallen
 
       {{7}}
-??[Esther’s scroll in a cover](https://sketchfab.com/3d-models/esthers-scroll-in-a-cover-21a13eba33cb4343bab56f0c0f982876 "Historical Museum of the City of Kraków")
+??[Plant Cell | Biology](https://sketchfab.com/3d-models/plant-cell-biology-0640c7a14f41400fbdac382c7de1d776 "A model of a plant cell with all major organelles.")
 
     --{{8}}--
 Und noch viel viel mehr... Wir werden gleich zeigen wie alles funktioniert.
@@ -162,6 +162,8 @@ However, our intention was to utilize LiaScript in various contexts.
 With LiaScript, you can create presentations, enable self-study through browser-based text-to-speech output, or read the content as simple yet interactive textbook, without animations.
 
 ## Tutorial
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGpnbDQ0NXl1cGc5MmR5bjU2NjA4aHIwMmF6a2NvbjBjY3M0dWxucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aRCHu0KPdSpGZB3bSZ/giphy.gif)<!-- style="width: 100%" -->
 
 ### Grundlagen
 
