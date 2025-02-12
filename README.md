@@ -1,7 +1,11 @@
 <!--
 
+author:  Sebastian Zug; André Dietrich
+
 language: de
+
 narrator: Deutsch Female
+
 
 @CSV
 <script run-once style="display:block" modify="false">
@@ -23,30 +27,9 @@ csvToMarkdownTable("@0")
 </script>
 @end
 
-@style
-@keyframes burn {
-  0% {
-    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00,
-      0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
-  }
-  50% {
-    text-shadow: 0 0 10px #ff0, 0 0 15px #ff0, 0 0 20px #ff0, 0 0 25px #f00,
-      0 0 30px #f00, 0 0 35px #f00, 0 0 40px #f00;
-  }
-  100% {
-    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00,
-      0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
-  }
-}
-
-.burning-text {
-  font-weight: bold;
-  color: #fff;
-  animation: burn 1.5s infinite alternate;
-}
-@end
-
 @burn: <span class="burning-text">@0</span>
+
+link:     style.css
 
 script:   https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js
           https://cdn.jsdelivr.net/npm/@tensorflow/tfjs
@@ -54,6 +37,7 @@ script:   https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.j
           https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js
 
 import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
+import:   https://raw.githubusercontent.com/LiaTemplates/GGBScript/refs/heads/main/README.md
 
 -->
 
@@ -309,6 +293,7 @@ Was haben diese beiden Darstellungen gemeinsam?
 |  20 |    4 |
 |  30 |    6 |
 
+
 #### Mehr Tabellen
 
 | Animal          | weight in kg | Lifespan years | Mitogen |
@@ -320,6 +305,15 @@ Was haben diese beiden Darstellungen gemeinsam?
 | Human           |           68 |             70 |      10 |
 
 > [Spaß mit Tabellen](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#Fun-With-Tables)
+
+
+### Selber Weiterlernen
+
+Workshop auf der DELFI-Tagung in Aachen (am 11.09.2023)
+
+!?[Delfi Workshop - 1](https://www.youtube.com/watch?v=2FGRRC5lTNQ)
+
+!?[Delfi Workshop - 2](https://www.youtube.com/watch?v=GrXanapDLYA)
 
 ## Titanic - Datenanalyse
 
@@ -468,50 +462,191 @@ dev.off()
 ```
 @LIA.r
 
-### JavaScript
+## JavaScript
 
 > “Any application that can be written in JavaScript, will eventually be written in JavaScript.”
 >
 > -- [Atwood's Law](https://en.wikipedia.org/wiki/Jeff_Atwood)
 
-``` js
-async function csvToMarkdownTable(csvFile) {
-    const response = await fetch(csvFile);
-    const text = await response.text();
+---
 
-    const results = Papa.parse(text);
+``` markdown
+Russland startete seinen Überfall auf die Ukraine
+<script format="relativetime" unit="day" locale="de">
+// Datum der Invasion
+const invasionStartDate = new Date('2022-02-24');
+// Erhalten der aktuellen Zeit
+const currentDate = new Date();
+// Berechnung der Differenz in Millisekunden
+const differenceInMs = currentDate - invasionStartDate;
 
-    const data = results.data.filter(row => row.Age !== null);
-            
-    // Gruppieren der Überlebensrate nach Altersgruppen
-        const ageBins = [0, 10, 20, 30, 40, 50, 60, 70, 80];
-        const survivalRates = ageBins.map((bin, i) => {
-            if (i === ageBins.length - 1) return null;
-            const ageGroup = data.filter(d => d.Age >= bin && d.Age < ageBins[i + 1]);
-            const survivalRate = ageGroup.length ? ageGroup.filter(d => d.Survived === 1).length / ageGroup.length : 0;
-            return { bin: `${bin}-${ageBins[i + 1]}`, survivalRate: survivalRate * 100 };
-        }).filter(d => d !== null);
-            
-        const option = {
-            title: { text: "Überlebenswahrscheinlichkeit nach Alter" },
-            xAxis: { type: "category", data: survivalRates.map(d => d.bin) },
-            yAxis: { type: "value", name: "Überlebensrate (%)" },
-            series: [{ data: survivalRates.map(d => d.survivalRate), type: "bar" }]
-        };
-        
-        console.log(option);
+// Umrechnung von Millisekunden in Tage
+const differenceInDays = differenceInMs / (1000 * 60 * 60 * 24);
+// Berchnung der Anzahl der vollen Tage
+const daysSinceInvasion = Math.floor(differenceInDays);
 
-
-    console.html(`<lia-chart options="${option}"></lia-chart>`);
-    send.lia("LIA: stop");
-}
-
-csvToMarkdownTable("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
-
-"LIA: wait"
+// Rückgabeergebnis
+-daysSinceInvasion
+</script>.
 ```
-<script>
-@input
-</script>
 
-## Wo wollen wir hin?
+### Datensätze & Echtzeitdaten
+
+Hier findest Du eine Übersicht einiger öffentlicher Plattformen, über die Regierungen und Behörden in Deutschland und der EU Daten kostenfrei zur Verfügung stellen:
+
+1. **GovData – Open Data Portal der deutschen Verwaltung**
+
+   - **Link:** https://www.govdata.de
+   - **Beschreibung:** Zentraler Zugang zu offenen Daten der Bundes-, Landes- und Kommunalverwaltungen in Deutschland.
+
+2. **EU Open Data Portal**  
+
+   - **Link:** https://data.europa.eu/euodp/de/home
+   - **Beschreibung:** Offizielles Portal der Europäischen Union, das Daten und Informationen der EU-Institutionen und -Organe bereitstellt.
+
+3. **Destatis GENESIS-Online – Daten des Statistischen Bundesamts**  
+
+   - **Link:** https://www-genesis.destatis.de
+   - **Beschreibung:** Offizielle Datenbank des Statistischen Bundesamts (Destatis) mit umfangreichen statistischen Informationen zu Deutschland.
+
+4. **Eurostat**  
+
+   - **Link:** https://ec.europa.eu/eurostat
+   - **Beschreibung:** Statistisches Amt der Europäischen Union, das vergleichbare europäische Statistiken zu Wirtschaft, Bevölkerung, Umwelt und mehr anbietet.
+
+5. **Geoportal.de – Geodatenportal für Deutschland**
+
+   - **Link:** https://www.geoportal.de
+   - **Beschreibung:** Zentrales Portal für Geoinformationen in Deutschland, das Geodaten aus verschiedenen öffentlichen Stellen bündelt.
+
+6. **Umweltbundesamt (UBA) – Offene Daten**
+
+   - **Link:** https://www.umweltbundesamt.de/daten
+   - **Beschreibung:** Hier werden umweltbezogene Daten, Berichte und Statistiken des Umweltbundesamtes bereitgestellt.
+
+#### Open-Meteo API
+
+> Open-Meteo ist ein Anbieter einer kostenfreien Wetter-API, die es Entwicklern ermöglicht, ohne API-Schlüssel oder Registrierung präzise und anpassbare Wettervorhersagen in ihre Anwendungen zu integrieren.
+> Die API liefert eine Vielzahl von Wetterparametern – wie Temperatur, Niederschlag und Windgeschwindigkeit – und lässt sich dank klarer Dokumentation und eines Open-Source-Ansatzes problemlos in Projekte einbinden.
+>
+> Link: https://open-meteo.com/
+
+``` markdown
+longitude: <script default="13.33125" input="range" output="longitude">@input</script>
+
+latitude: <script default="50.92558" input="range" output="latitude">@input</script>
+
+<script run-once="true" style="display: block">
+  fetch("https://api.open-meteo.com/v1/forecast?latitude=@input(`latitude`)&longitude=@input(`longitude`)&hourly=temperature_2m")
+    .then(response => response.json())
+    .then(data => {
+      let table = "<!-- data-show data-type='line' data-title='Open-Meteo Wheather API' -->\n"
+
+      table += "| Time | Temperature |\n"
+      table += "| ---- | ----------- |\n"
+
+      for (let i=0; i < data.hourly.time.length; i++) {
+        table += "| " + data.hourly.time[i] + " | " + data.hourly.temperature_2m[i] + " |\n"
+      }
+      send.lia("LIASCRIPT: "+table) }
+    )
+    .catch(e => {
+      send.lia("ups, something went wrong")
+    })
+  "waiting for the weather"
+</script>
+```
+
+### Code Verstehen
+<!--
+@val: <script input="range" min="-10" max="10" value="@1" step="0.1" default="@1" output="@0">@input</script>
+-->
+
+https://github.com/LiaTemplates/GGBScript/
+
+
+    {{1}}
+``` js @GGBScript
+Titel("Punkt A & B")
+
+// Definiere zwei Punkte
+const A = Punkt(1, 2, "A")
+const B = Punkt([4, 6], "B")
+```
+
+    {{2}}
+``` js @GGBScript
+Titel("Strecke S")
+
+// Definiere Punkte
+const A = Punkt(1, 2, "A")
+const B = Punkt(4, 6, "B")
+
+// Erzeuge eine Strecke
+const S = Strecke(A, B, "S")
+```
+
+    {{3}}
+*************************************
+
+Gegeben sei ein Dreieck, dass durch die folgenden Punkte definiert ist
+
+- $A$ = (@val(A0,1), @val(A1,2))
+- $B$ = (@val(B0,4), @val(B1,2))
+- $C$ = (@val(C0,2), @val(C1,5))
+
+Berechne den Mittelpunkt
+
+``` js @GGBScript
+// Definiere Punkte
+let A = Punkt(@input(`A0`), @input(`A1`), "A")
+let B = Punkt(@input(`B0`), @input(`B1`), "B")
+let C = Punkt(@input(`C0`), @input(`C1`), "C")
+
+// Erzeuge ein Polygon
+const P = Polygon(A, B, C)
+
+// Berechne den Mittelpunkt
+const M = Mittelpunkt(P)
+
+Rotation(P, M, 0)
+```
+
+*************************************
+
+
+## Wie mache ich weiter?
+
+Wir hoffen, dass wir Sie überzeugen konnten. Falls Sie nun von den vielen Funktionen überwältigt sind und sich fragen, wo Sie anfangen sollen – wie Sie einen Kurs erstellen und teilen – empfehlen wir Ihnen als Einstieg die LiaScript-Website, die wir kostenlos auf GitHub hosten:
+
+https://liascript.github.io
+
+Dort finden Sie weitere Informationen sowie die Dokumentation, die ebenfalls als LiaScript-Kurs geschrieben ist, ebenso wie Vorschläge und Neuigkeiten in unserem Blog.
+
+Wer direkt aus der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md) heraus starten möchte, kann dies tun, indem er auf den folgenden Link klickt:
+
+https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaScript/docs/master/README.md
+
+Außerdem existiert ein YouTube-Kanal, auf dem wir regelmäßig neue Funktionen und Anwendungsbeispiele vorstellen:
+
+https://www.youtube.com/@liascript4180
+
+... Mit einer sich selbst erklärenden Dokumentation ...
+
+https://www.youtube.com/watch?v=ElxYssylmaw&list=PL7LrRfaZulhc3w4rebIl8Dnck6zqdKeNn
+
+Das gesamte Projekt wird auf GitHub gehostet:
+
+https://github.com/LiaScript
+
+Dort können Sie uns Feedback geben, Fehler melden oder Ihre eigenen Erweiterungen beitragen. Für schnelle Antworten und Diskussionen haben wir zudem einen Chat auf Gitter:
+
+https://app.gitter.im/#/room/#LiaScript_community:gitter.im
+
+… oder senden Sie uns einfach eine E-Mail an:
+
+LiaScript@web.de
+
+Oder folgen und kontaktieren Sie uns auf Twitter/X:
+
+https://twitter.com/LiaScript
