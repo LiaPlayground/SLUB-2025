@@ -3,6 +3,26 @@
 language: de
 narrator: Deutsch Female
 
+@CSV
+<script run-once style="display:block" modify="false">
+async function csvToMarkdownTable(csvFile) {
+  const response = await fetch(csvFile);
+  const text = await response.text();
+  const rows = Papa.parse(text).data;
+  let markdownTable = "| " + rows[0].join(" | ") + " |\n"; // Header
+  markdownTable += "| " + rows[0].map(() => "---").join(" | ") + " |\n"; // Separator
+  for (let i = 1; i < rows.length; i++) {
+    if (rows[i].length === rows[0].length) {
+      markdownTable += "| " + rows[i].join(" | ") + " |\n";
+    }
+  }
+  send.lia("LIASCRIPT: <!-- data-type='none' --" + ">" + markdownTable);
+}
+csvToMarkdownTable("@0")
+"LIA: wait"
+</script>
+@end
+
 @style
 @keyframes burn {
   0% {
@@ -258,48 +278,66 @@ Wer hat die Relativitätstheorie entwickelt?
 
 ------------------------------------------------------
 
-
 Bestimmen Sie den Wert des folgenden Integrals:
 $ I = \int_{0}^{\infty} \frac{e^{-x} - e^{-e^2 x}}{x}\, dx. $
 
-[[?]]
-
+[[2]]
 
 
 ### Interaktive Diagramme
 
+Was haben diese beiden Darstellungen gemeinsam?
+
+
+    9 |                                       (* dots)
+      |
+    y |                              *
+    - |
+    a |                    *
+    x |
+    i |          *
+    s |
+      |*
+    0 +------------------------------------
+      0            x-axis                 36
+
+
+|   x | dots |
+| ---:| ----:|
+|   0 |    0 |
+|  10 |    2 |
+|  20 |    4 |
+|  30 |    6 |
+
+#### Mehr Tabellen
+
+| Animal          | weight in kg | Lifespan years | Mitogen |
+| --------------- | ------------:| --------------:| -------:|
+| Mouse           |        0.028 |              2 |      95 |
+| Flying squirrel |        0.085 |             15 |      50 |
+| Brown bat       |        0.020 |             30 |      10 |
+| Sheep           |           90 |             12 |      95 |
+| Human           |           68 |             70 |      10 |
+
+> [Spaß mit Tabellen](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#Fun-With-Tables)
+
 ## Titanic - Datenanalyse
 
-<script run-once style="display:block" modify="false">
-async function csvToMarkdownTable(csvFile) {
-  const response = await fetch(csvFile);
-  const text = await response.text();
-  const rows = Papa.parse(text).data;
+[CSV](https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv)
 
-  let markdownTable = "| " + rows[0].join(" | ") + " |\n"; // Header
-  markdownTable += "| " + rows[0].map(() => "---").join(" | ") + " |\n"; // Separator
+> LiaScript Funktionalität importieren hat immer was mir \@ zu tun.
+>
+> https://github.com/topics/liascript-template
 
-  for (let i = 1; i < rows.length; i++) {
-    if (rows[i].length === rows[0].length) {
-      markdownTable += "| " + rows[i].join(" | ") + " |\n";
-    }
-  }
-
-  send.lia("LIASCRIPT: <!-- data-type='none' -->\n" + markdownTable);
-}
-
-csvToMarkdownTable("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
-
-"LIA: wait"
-</script>
 
 ### Python - Survival of the Richest
 <!--
 persistent: true
 -->
 
-
-`import: https://raw.githubusercontent.com/liaTemplates/PyScript/main/README.md`
+> Quelle: https://github/LiaTemplates/PyScript
+>
+> `import: https://raw.githubusercontent.com/liaTemplates/PyScript/main/README.md`
 
 ``` python @PyScript.repl
 import pyodide.http
@@ -363,9 +401,9 @@ plt
 
 ### R - Frauen und Kinder zuerst?
 
-https://github.com/liaScript/coderunner
-
-`import: https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md`
+> https://github.com/LiaScript/CodeRunner
+>
+> `import: https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md`
 
 ``` r
 library(ggplot2)
