@@ -6,6 +6,8 @@ language: de
 
 narrator: Deutsch Female
 
+import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/tags/0.0.1/README.md
+
 
 @CSV
 <script run-once style="display:block" modify="false">
@@ -41,279 +43,202 @@ import:   https://raw.githubusercontent.com/LiaTemplates/GGBScript/refs/heads/ma
 
 -->
 
-# Lebendige Dokumente mit LiaScript
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Cross-Lab-Project/presentations/refs/heads/main/TUC_digital_2024/presentation.md)
 
-Kontakte, links
+# Lebendige Daten mit LiaScript
 
+<h2>LiaScript Tutorial im Rahmen der _Love Data Week_ 2025</h2>
 
-## Agenda
+---------------------
 
-1. LiaScript stellt sich vor
+QRCODE des Kurses
 
-2. Tutorial
+----------------------
 
-    - Grundlagen
-    - Multimedia
-    - Quizze
-    - Interaktive Diagramme
+<h5>
+<p>Dr. Andre Dietrich, Dr. Ines Aubel, Prof. Dr. Sebastian Zug</p>
+<p>TU Bergalakdemie Freiberg</p>
+<p>Februar 2025</p>
+</h5>
 
-3. Titanic - Datenanalyse
+<div>
 
-    - Python
-    - R
-    - JavaScript
+---
 
-4. Wo wollen wir hin?
+</div>
 
+## Warum LiaScript?
 
-## LiaScript stellt sich vor
+                        {{0-3}}
+*******************************************************
 
-    --{{0}}--
-Hallo, mein Name ist LiaScript, ich bin eine auf Markdown basierende Sprache, die speziell entwickelt wurde um Lehrmaterialien zu erstellen.
-Der Vorteil von Markdown ist, dass es bereits weit verbreitet ist, einfach zu schreiben und zu lesen ist, und dass es von vielen Plattformen unterstützt wird.
-Der größte Nachteil ist jedoch, dass es @burn(statisch wie die Hölle) und keine Interaktivität bietet.
-
-    --{{1}}--
-Also haben sich meine Väter daran gemacht, Markdown von Grund auf neu zu denken...
-
-     {{1-2}}
-*******************************
-
-?[Giorgio Moroder](https://music.youtube.com/watch?v=zhl-Cs1-sG4&si=fwB6LT2I0rQ0_CGE&start=300&end=312)<!-- style="border-radius: 10px; border: none" -->
-
-> ... Once you free your mind about a concept of Harmony and of music being "correct" You can do whatever you want ...
+> _"Another approach is to use a system like LiaScript [2], which enables the creation of __interactive online courses__ based on Markdown and JavaScript. It allows for embedding external elements including interactive elements, e.g. videos. The courses themselves can be developed in a decentralized way."_ 
 >
-> -- Giorgio Moroder (Erfinder der Disco-Musik)
+> (Sebastian Speiser, "Composition of Open Educational Resources through Dynamic Linking of Modular Components", Proceedings of the 2024 16th International Conference on Education Technology and Computers)
 
-******************************
+*******************************************************
 
-    --{{2}}--
-Eigentlich sind Tabellen in Markdown einfach zu erstellen und wie schon erwähnt, sind sie ganz schön @burn(statisch).
-Eine Tabelle kann aber auch einen Datensatz representieren, der nach seiner idealen Visualisierung strebt.
+                        {{1-3}}
+*******************************************************
 
-      {{2}}
-| Tier                      | Gewicht in kg | Lebensdauer (Jahre) | Mitogen |
-| ------------------------- | ------------: | ------------------: | ------: |
-| Maus                      |        0.028  |                02   |      95 |
-| Fliegendes Eichhörnchen   |        0.085  |                15   |      50 |
-| Braune Fledermaus         |        0.020  |                30   |      10 |
-| Schaf                     |           90  |                12   |      95 |
-| Mensch                    |           68  |                70   |      10 |
+> ... und was hat das mit Forschungsdatenmanagement zu tuen?
 
 
-    --{{3}}--
-Eine andere tabellarische Struktur kann eine andere Visualisierung erzeugen, die vom Ersteller feinabgestimmt werden kann.
-Insgesamt beherrsche ich 10 unterschiedliche arten von Visualisierungen.
+*******************************************************
 
-      {{3}}
-<!--
-data-type="heatmap"
-data-title="Seattle Durchschnittstemperatur in Fahrenheit"
-data-show
--->
-| Seattle |  Jan |  Feb |  Mär |  Apr |  Mai |  Jun |  Jul |  Aug |  Sep |  Okt |  Nov |  Dez |
-| -------:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:|
-|       0 | 40.7 | 41.5 | 43.6 | 46.6 | 51.4 | 56.0 | 60.5 |  61.2 | 57.0 | 50.1 | 44.1 | 39.6 |
-|       2 | 40.2 | 40.7 | 42.7 | 45.3 | 50.0 | 54.4 | 58.5 |  59.2 | 55.4 | 49.2 | 43.5 | 39.3 |
-|       4 | 39.7 | 40.0 | 41.9 | 44.4 | 48.9 | 53.2 | 57.0 |  57.7 | 54.2 | 48.6 | 43.1 | 38.9 |
-|       6 | 39.6 | 39.5 | 41.3 | 44.2 | 49.5 | 54.2 | 57.8 |  57.4 | 53.6 | 48.2 | 42.8 | 38.7 |
-|       8 | 39.6 | 39.9 | 42.9 | 47.1 | 52.7 | 57.3 | 61.3 |  61.1 | 56.7 | 49.5 | 43.1 | 38.7 |
-|      10 | 41.3 | 42.7 | 46.4 | 50.7 | 56.4 | 60.9 | 65.2 |  65.4 | 60.9 | 52.8 | 45.5 | 40.4 |
-|      12 | 43.8 | 46.0 | 49.5 | 53.8 | 59.6 | 64.3 | 69.4 |  69.8 | 65.1 | 56.0 | 47.8 | 42.6 |
-|      14 | 45.1 | 47.7 | 51.3 | 55.9 | 61.9 | 66.9 | 72.6 |  73.2 | 67.7 | 57.8 | 48.8 | 43.6 |
-|      16 | 44.5 | 47.5 | 51.4 | 55.9 | 62.3 | 67.5 | 73.9 |  74.3 | 68.2 | 57.4 | 47.8 | 42.6 |
-|      18 | 42.6 | 44.7 | 48.7 | 53.8 | 60.3 | 65.9 | 72.3 |  72.2 | 64.6 | 53.9 | 46.0 | 41.2 |
-|      20 | 42.0 | 43.3 | 46.4 | 50.2 | 56.0 | 61.4 | 66.9 |  66.6 | 60.7 | 52.3 | 45.2 | 40.7 |
-|      22 | 41.4 | 42.5 | 45.0 | 48.3 | 53.5 | 58.2 | 63.2 |  63.5 | 58.7 | 51.1 | 44.5 | 40.1 |
+                        {{1-2}}
+*******************************************************
 
-    --{{4}}--
-Was Markdown immer gefehlt hat, war das Einbetten von multimedialen Inhalten ...
 
-    --{{5}}--
-Ich beherrsche Audio-Inhalte ...
+```ascii
 
-     {{5-6}}
-?[Sofia Rutaru: Червона рута](https://soundcloud.com/user-324560360/i1jlmnpatoro)
 
-   --{{6}}--
-Video kann ich auch und natürlich funktioniere ich auch auf Feature-Phones auch wenn diese offline sind.
+| Aspekte des Forschungsdatenmanagements | Einsatz von LiaScript  |
+|                                        | Lehre      | Anwendung |  
+| -------------------------------------- | ---------- | --------- |
+| 1. Datenmanagement & Speicherung       |    ┓       |           |
+| 2. Metadaten & Dokumentation           |    ┃       |     ✅    |
+| 3. Datenanalyse & Verarbeitung         |    ┃       |     ✅    |
+| 4. Datenversionierung & Kollaboration  |    ┣ ✅    |           |
+| 5. Datenpublikation & Open Science     |    ┃       |           |
+| 6. Langzeitarchivierung                |    ┛       |           |                                             .
 
-     {{6-7}}
-!?[LiaScript auf Nokia](https://www.youtube.com/watch?v=U_UW69w0uHE)
-
-    --{{7}}--
-Ich kann auch versuchen andere Arten von Inhalten einzubetten, die unter keine der beiden Kategorien fallen
-
-      {{7}}
-??[Plant Cell | Biology](https://sketchfab.com/3d-models/plant-cell-biology-0640c7a14f41400fbdac382c7de1d776 "A model of a plant cell with all major organelles.")
-
-    --{{8}}--
-Und noch viel viel mehr... Wir werden gleich zeigen wie alles funktioniert.
-
-      {{8}}
-```abc
-X: 1
-M: 4/4
-L: 1/8
-K: Emin
-|:D2|"Em"EBBA B2 EB|~B2 AB dBAG|"D"FDAD BDAD|FDAD dAFD|
-"Em"EBBA B2 EB|B2 AB defg|"D"afe^c dBAF|"Em"DEFD E2:|
 ```
-@ABCJS.eval
 
-    --{{9 US English Female}}--
-You might have noticed that this document is being used like a PowerPoint presentation.
-However, our intention was to utilize LiaScript in various contexts.
-With LiaScript, you can create presentations, enable self-study through browser-based text-to-speech output, or read the content as simple yet interactive textbook, without animations.
+*******************************************************
 
+                        {{2-3}}
+*******************************************************
 
-## Tutorial
+```ascii
+                                                                              .-.
+                                                                             ( 0 ) "__LiaScript als Konzept__"
+| Aspekte des Forschungsdatenmanagements | Einsatz von LiaScript  |           .-.
 
-![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGpnbDQ0NXl1cGc5MmR5bjU2NjA4aHIwMmF6a2NvbjBjY3M0dWxucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aRCHu0KPdSpGZB3bSZ/giphy.gif)<!-- style="width: 100%" -->
+|                                        | Lehre      | Anwendung |    .-.
+| -------------------------------------- | ---------- | --------- |   ( 1 ) "__LiaScript Grundlagen__" 
+| 1. Datenmanagement & Speicherung       |    ┓       |           |    .-.
+| 2. Metadaten & Dokumentation           |    ┃       |     ✅  .-.
+| 3. Datenanalyse & Verarbeitung         |    ┃       |     ✅ ( 2 ) "__LiaScript für die Datenanalyse__" 
+| 4. Datenversionierung & Kollaboration  |    ┣ ✅    |         .-.
+| 5. Datenpublikation & Open Science     |    ┃  .-.  |           |
+| 6. Langzeitarchivierung                |    ┛ ( 3 ) "__LiaScript meets OER__"                                  .
+                                                 .-.
+ 
+```
 
+*******************************************************
 
-### Grundlagen
+## 0. LiaScript als Konzept
 
-#Überschriften
+                        {{0-1}}
+*******************************************************
 
-Überschriften werden durch ein oder mehrere Rautezeichen # definiert.
-Gliedere den folgenden Text in Abschnitte und Unterabschnitte!
+> __1. Wir trennen Darstellung und Inhalt! Alle Elemente werden soweit wie möglich durch eine rein textuelle Repräsentation ausgedrückt.__
 
-#Absätze
+```markdown @embed.style(height: 550px; min-width: 100%; border: 1px black solid)
+# Vom Text zur Darstellung
 
-Ein Absatz in Markdown wird durch eine Leerzeile definiert.
-Ich kann auch Text **fett** oder *kursiv* darstellen.
-Bitte teile mich in kleinere Abschnitte auf, damit ich besser verstanden werde!
+__Text__
 
+Hallo Welt!
 
-#Listen
+__Mathematik__
 
-##Ungeordnete Listen
+$f(x) = x^2$
 
-Eine ungeordnete Liste beginnt mit einem Sternchen.
-Einem Bindestrich ader einem Pluszeichen
-Füge weitere Elemente und Unterpunkte hinzu!
+__Tabellen__
 
-##Geordnete Listen
+| X | B(y) | C(y) |
+|---|:----:|:----:|
+| 1 |   2  |   3  |
+| 4 |   5  |   6  |
 
-Eine geordnete Liste beginnt mit einer Zahl.
-Füge weitere Absätze und ungeordnete Listen hinzu!
+```
 
-#Zitate
+*******************************************************
 
-Ein Zitat wird durch ein Größerzeichen > eingeleitet.
+                        {{1-2}}
+*******************************************************
 
-Füge ein weiteres Zitat mit hinzu! -- Mit Quellenangabe.
+> __2. Lehre lebt von Interaktion__
 
+```markdown @embed.style(height: 550px; min-width: 100%; border: 1px black solid)
+# Lehre lebt von Interaktion
 
-### Multimedia
+__Tabellen als Grafiken__
 
-- __Markdown__
+| X | B(y) | C(y) |
+|---|:----:|:----:|
+| 1 |   2  |   3  |
+| 4 |   5  |   6  |
 
-  - Links oder Verweise:
-    `[name](url "title")`
+__Sprache__
 
-    [Open Educational Resources](https://de.wikipedia.org/wiki/Open_Educational_Resources)
+> Click to run!
+>
+> {{|> Deutsch Female}}
+> Markdown ist eine vereinfachte Auszeichnungssprache, die der Ausgangspunkt unserer Entwicklung von LiaScript war.
 
-  - Ein Bild ist ein wichtiger Link __!__ :
-    `![alt-text](url)`
+__Quizze__
 
-    [OER-Logo](https://upload.wikimedia.org/wikipedia/commons/2/20/Global_Open_Educational_Resources_Logo.svg)
+Wann wurde die Slub gegründet?
 
-- __LiaScript__
+- [(X)] 1996
+- [( )] 1896
+```
 
-  - Ist Audio genauso wichtig __?__ :
-    `?[alt-text](...mp3 oder soundcloud-url)`
+*******************************************************
 
-    [zugehOERt 104: How to OER-Policy](https://open-educational-resources.de/podlove/file/1666/s/webplayer/c/episode/OER104.mp3 "zugehOERt 104: How to OER-Policy? Das OER-Policy Kit gibt Antworten ... Mehr Informationen zum Podcast gibt es hier: https://open-educational-resources.de/oer104/ ")
+                        {{2-3}}
+*******************************************************
 
-  - Dann bestehen Videos aus Bild__!__ und Ton__?__:
-    `!?[alt-text](...mp4 oder YouTube-url)`
+> __3. Der Browser kann viel mehr als Webseiten anzuzeigen.__
 
-    [Kollaborativer Online Editor für LiaScript](https://www.youtube.com/watch?v=EZuxYsMBKO4)
+````markdown @embed.style(height: 550px; min-width: 100%; border: 1px black solid)
 
-  - Last but not least, wenn man irgendwas anderes einbinden möchte:
-    `??[alt-text](beliebige-url)`
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
+-->
 
-    [Phet: Baue einen Atomkern](https://phet.colorado.edu/sims/html/build-a-nucleus/latest/build-a-nucleus_all.html?locale=de)
+# Browserfeatures / JavaScript
 
-    [SketchFab: Astraea (Orbicella) curta](https://sketchfab.com/3d-models/astraea-orbicella-curta-bb767cd759fc428081ec9c302baf1ed1)
+__Sprache__
 
-    [Irgendeine Schaltung](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgzCAMB0l3BWEBGATLBlWTADjagCzK4CcSmIFkVApgLTLIBQAhioYSEbt0d4V69kSRkmTx4HaKVmyA7NhyEAbAmSkU4yZGYB3Dl1RhUh7nCjMAxmaV8jFmjEnJCc9x7nTFcMCQSoyPKkgVCwkCwGqPx20UaClgauRiYoqLzGprrIKjRMphJc+SgqvDTYKDo6+mnCpbXcqboA5iCkKiW87Si4XE7MAE4NmSAqKVklcMwAlihoVB3FhVBhEcwASnOmCB1jCys0hOVOB9AIbPbce36mqHu8SHlVYajB7QhggjnyYJDkHU9JMxWnFuLhyjFuv0REgblcuGB5B07kVEuB5ukaHCwLk0YiOtikeBcboDPjiVj5jj+ptsbj0rxqShuKMLOgkOzTuckukUDjwETkPzSQLFvzyagocwclxCKlfrLweBIKi+gcqCAAC4DACutEsmzlpiOWKJJpWt3KZ241voMCChA+ktQ6lkRvIYVIG1se2KKPVRy06pg3Ip3G6EqlOV4gixKqoVPjEC4jwOzAAslReQqFnG1eyM1nGRUEESTCcC5mAoz+QgQuBhTbzlXswFWYy21bQ7HiTGleaRUbwG2hwPvT3zROmiyKpzOfQwNBXCIQmowAgyMEICHvXsRoGRodmfJrSfUzuRBByTmhznkCyaOcAPbgUx7Q5-DLW5yQFQui2vuAzAvv+74gEcpBlOEcBIpKYCkI6NyPNBfxIjs-73iwIG7GqEFQZIsGkPBiFoMhkikGhf7iCgwHcPIoy4Z+qzwIRxEfKRzFwBRahUcyWFggxKx4RqP5cZRGE0UAA)
+> Click to run!
+>
+> {{|> Deutsch Female}}
+> Markdown ist eine vereinfachte Auszeichnungssprache, die der Ausgangspunkt unserer Entwicklung von LiaScript war.
 
+__Datenspeicherung__
 
-### Quizze
+``` abc  @ABCJS.render
+X:353
+T: GLUECK AUF DER STEIGER KOEMMT
+N: E1512
+O: Europa, Mitteleuropa, Deutschland
+R: Staende -, Bergmanns - Lied
+M: 4/4
+L: 1/16
+K: G
+ | G8F4asdfasA4 | G8z8 |
+B8A4c4 | B8z4
+G2A2 | B4B4B4A2B2 | c4A3AA4
+A2B2 | c4c4c4B2c2 | d4B3BB4
+A4 | G8F8 | G4e4d4
+c2A2 | B8A8 | G8z8
+```
 
-Welche Farbe hat der Himmel, Mehrfachauswahl möglich?
+````
 
-- [[X]] Blau
 
-------------------------------------------------------
+## 1. LiaScript Tutorial
 
-Wann wurde die erste Mondlandung durchgeführt?
+QR Code und Link 
 
-- [(X)] 1969
 
-------------------------------------------------------
 
-Wer hat die Relativitätstheorie entwickelt?
-
-[[ Albert Einstein | Isaac Newton | Stephen Hawking | (Dieter Nuhr) ]]
-
-------------------------------------------------------
-
-Bestimmen Sie den Wert des folgenden Integrals:
-$ I = \int_{0}^{\infty} \frac{e^{-x} - e^{-e^2 x}}{x}\, dx. $
-
-[[2]]
-
-
-### Interaktive Diagramme
-
-Was haben diese beiden Darstellungen gemeinsam?
-
-
-    9 |                                       (* dots)
-      |
-    y |                              *
-    - |
-    a |                    *
-    x |
-    i |          *
-    s |
-      |*
-    0 +------------------------------------
-      0            x-axis                 36
-
-
-|   x | dots |
-| ---:| ----:|
-|   0 |    0 |
-|  10 |    2 |
-|  20 |    4 |
-|  30 |    6 |
-
-
-#### Mehr Tabellen
-
-| Animal          | weight in kg | Lifespan years | Mitogen |
-| --------------- | ------------:| --------------:| -------:|
-| Mouse           |        0.028 |              2 |      95 |
-| Flying squirrel |        0.085 |             15 |      50 |
-| Brown bat       |        0.020 |             30 |      10 |
-| Sheep           |           90 |             12 |      95 |
-| Human           |           68 |             70 |      10 |
-
-> [Spaß mit Tabellen](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#Fun-With-Tables)
-
-
-### Selber Weiterlernen
-
-Workshop auf der DELFI-Tagung in Aachen (am 11.09.2023)
-
-!?[Delfi Workshop - 1](https://www.youtube.com/watch?v=2FGRRC5lTNQ)
-
-!?[Delfi Workshop - 2](https://www.youtube.com/watch?v=GrXanapDLYA)
+## 2. LiaScript in der Datenanalyse
 
 ## Titanic - Datenanalyse
 
@@ -614,6 +539,18 @@ Rotation(P, M, 0)
 
 *************************************
 
+## 3. LiaScript meets OER
+
+
+
+
+## Selbst Weiterlernen
+
+Workshop auf der DELFI-Tagung in Aachen (am 11.09.2023)
+
+!?[Delfi Workshop - 1](https://www.youtube.com/watch?v=2FGRRC5lTNQ)
+
+!?[Delfi Workshop - 2](https://www.youtube.com/watch?v=GrXanapDLYA)
 
 ## Wie mache ich weiter?
 
