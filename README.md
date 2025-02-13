@@ -8,7 +8,6 @@ narrator: Deutsch Female
 
 import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/tags/0.0.1/README.md
 
-
 @CSV
 <script run-once style="display:block" modify="false">
 async function csvToMarkdownTable(csvFile) {
@@ -231,7 +230,6 @@ c2A2 | B8A8 | G8z8
 
 ````
 
-*******************************************************
 
 ## 1. LiaScript Tutorial
 
