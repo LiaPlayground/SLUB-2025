@@ -6,7 +6,6 @@ language: de
 
 narrator: Deutsch Female
 
-import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/tags/0.0.1/README.md
 
 @CSV
 <script run-once style="display:block" modify="false">
@@ -37,8 +36,8 @@ script:   https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.j
           https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js
           https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js
 
-import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
 import:   https://raw.githubusercontent.com/LiaTemplates/GGBScript/refs/heads/main/README.md
+import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/tags/0.0.1/README.md
 
 -->
 
@@ -195,7 +194,6 @@ Wann wurde die Slub gegründet?
 > __3. Der Browser kann viel mehr als Webseiten anzuzeigen.__
 
 ````markdown @embed.style(height: 550px; min-width: 100%; border: 1px black solid)
-
 <!--
 import: https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
 -->
@@ -227,9 +225,9 @@ A2B2 | c4c4c4B2c2 | d4B3BB4
 A4 | G8F8 | G4e4d4
 c2A2 | B8A8 | G8z8
 ```
-
 ````
 
+*******************************************************
 
 ## 1. LiaScript Tutorial
 
