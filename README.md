@@ -240,7 +240,7 @@ https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent
 ## 3. LiaScript meets FDM & OER
 
 {{0-1}}
-![](./screenshot_fdm_liascript.png)
+![Suchergebnisse zu "LiaScript Forschungsdatenmanagement"](./screenshot_fdm_liascript.png)
 
 {{1-2}}
 | Autor_innen                                           | Titel &  | Link | Hinweise |
@@ -251,10 +251,10 @@ https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent
 
 ## Wie mache ich weiter?
 
-| Ressource  | Hinweise |
-| ------|-----|
-| https://liascript.github.io | Projektwebseite  mit Links zu allen Informationen, LiveEditor, Blogbeiträgen, ... |
+| Ressource                                     | Hinweise                                                                          |
+| --------------------------------------------- | --------------------------------------------------------------------------------- |
+| https://liascript.github.io                   | Projektwebseite  mit Links zu allen Informationen, LiveEditor, Blogbeiträgen, ... |
 | [LiaScript erklärt LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md) | Dokumentation des Sprachumfanges |
-| https://www.youtube.com/@liascript4180 | Youtube Kanal |
-| https://github.com/orgs/LiaScript/discussions | Diskussionsforum von Nutzenden |
-| Andre & Ines & Sebastian | Zum direkt ansprechen :-) |
+| https://www.youtube.com/@liascript4180        | Youtube Kanal                                                                     |
+| https://github.com/orgs/LiaScript/discussions | Diskussionsforum von Nutzenden                                                    |
+| Andre & Ines & Sebastian                      | Zum direkt ansprechen :-)                                                         |
