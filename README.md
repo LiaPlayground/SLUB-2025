@@ -42,6 +42,8 @@ import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/ref
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/SLUB-2025/refs/heads/main/README.md#1)
 
+[![LiveEditor](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/edit.svg)](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/SLUB-2025/refs/heads/main/README.md)
+
 # Lebendige Daten mit LiaScript
 
 <!-- style="margin: 30px 0px" -->
