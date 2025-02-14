@@ -1,0 +1,39 @@
+@keyframes burn {
+  0% {
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00,
+      0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff0, 0 0 15px #ff0, 0 0 20px #ff0, 0 0 25px #f00,
+      0 0 30px #f00, 0 0 35px #f00, 0 0 40px #f00;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f00, 0 0 20px #f00,
+      0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+  }
+}
+
+.burning-text {
+  font-weight: bold;
+  color: #fff;
+  animation: burn 1.5s infinite alternate;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap as needed */
+  align-items: stretch;
+  gap: 20px; /* Adds both horizontal and vertical spacing between items */
+}
+
+.flex-child {
+  flex: 1;
+  margin-right: 20px; /* Adds space between the columns */
+}
+
+@media (max-width: 600px) {
+  .flex-child {
+    flex: 100%; /* Makes the child divs take up the full width on slim devices */
+    margin-right: 0; /* Removes the right margin */
+  }
+}

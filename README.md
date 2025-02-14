@@ -44,21 +44,27 @@ import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/ref
 
 # Lebendige Daten mit LiaScript
 
-<h2>LiaScript Tutorial im Rahmen der _Love Data Week_ 2025</h2>
+<!-- style="margin: 30px 0px" -->
+LiaScript Tutorial im Rahmen der _Love Data Week_ 2025
+=======================================================
 
 ---------------------------------------
 
-<div style="width: 36%; float: left">
+<section class="flex-container">
 
-<h5>
-<p>Dr. Andre Dietrich, Dr. Ines Aubel, Prof. Dr. Sebastian Zug</p>
-<p>TU Bergalakdemie Freiberg</p>
-<p>Februar 2025</p>
-</h5>
+<!-- class="flex-child" style="min-width: 250px; margin-top: 2.5rem" -->
+#### Dr. Andre Dietrich, Dr. Ines Aubel, Prof. Dr. Sebastian Zug \
+TU Bergalakdemie Freiberg \
+Februar 2025 \
 
-</div>
+<!-- class="flex-child" style="min-width: 250px" -->
+![QR-Code](./qrcode_liascript.github.io.png)
 
-![](./qrcode_liascript.github.io.png)<!-- style="width: 40%; float: right" -->
+</section>
+
+
+
+
 
 
 ## Warum LiaScript?
