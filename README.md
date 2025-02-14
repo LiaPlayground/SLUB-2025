@@ -66,7 +66,7 @@ import:   https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/ref
                         {{0-3}}
 *******************************************************
 
-> _"Another approach is to use a system like LiaScript [2], which enables the creation of __interactive online courses__ based on Markdown and JavaScript. It allows for embedding external elements including interactive elements, e.g. videos. The courses themselves can be developed in a decentralized way."_ 
+> _"Another approach is to use a system like LiaScript [2], which enables the creation of interactive __online courses__ based on Markdown and JavaScript. It allows for embedding external elements including __interactive elements__, e.g. videos. The courses themselves can be developed in a __decentralized way__."_ 
 >
 > (Sebastian Speiser, "Composition of Open Educational Resources through Dynamic Linking of Modular Components", Proceedings of the 2024 16th International Conference on Education Technology and Computers)
 
