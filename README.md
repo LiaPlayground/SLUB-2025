@@ -59,7 +59,7 @@ LiaScript Tutorial im Rahmen der _Love Data Week_ 2025
 TU Bergalakdemie Freiberg \
 Februar 2025 \
 
-<!-- class="flex-child" style="min-width: 250px" -->
+<!-- class="flex-child" style="min-width: 200px" -->
 ![QR-Code](./qrcode_liascript.github.io.png)
 
 </section>
