@@ -143,7 +143,7 @@ $f(x) = x^2$
 
 __Tabellen__
 
-| X | B(y) | C(y) |
+| x | B(x) | C(x) |
 |---|:----:|:----:|
 | 1 |   2  |   3  |
 | 4 |   5  |   6  |
@@ -166,13 +166,6 @@ __Tabellen als Grafiken__
 |---|:----:|:----:|
 | 1 |   2  |   3  |
 | 4 |   5  |   6  |
-
-__Sprache__
-
-> Click to run!
->
-> {{|> Deutsch Female}}
-> Markdown ist eine vereinfachte Auszeichnungssprache, die der Ausgangspunkt unserer Entwicklung von LiaScript war.
 
 __Quizze__
 
@@ -201,11 +194,11 @@ __Sprache__
 > Click to run!
 >
 > {{|> Deutsch Female}}
-> Markdown ist eine vereinfachte Auszeichnungssprache, die der Ausgangspunkt unserer Entwicklung von LiaScript war.
+> Hallo liebe LiaScript Interessierte!
 
 __Datenspeicherung__
 
-``` abc  @ABCJS.render
+``` abc
 X:353
 T: GLUECK AUF DER STEIGER KOEMMT
 N: E1512
@@ -214,13 +207,10 @@ R: Staende -, Bergmanns - Lied
 M: 4/4
 L: 1/16
 K: G
- | G8F4asdfasA4 | G8z8 |
-B8A4c4 | B8z4
-G2A2 | B4B4B4A2B2 | c4A3AA4
-A2B2 | c4c4c4B2c2 | d4B3BB4
-A4 | G8F8 | G4e4d4
-c2A2 | B8A8 | G8z8
+| G8F4A4 | G8z8 | B8A4c4 | B8z4G2A2 | B4B4B4A2B2 | c4A3AA4
+A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
 ```
+@ABCJS.eval
 ````
 
 *******************************************************
